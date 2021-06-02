@@ -1,8 +1,9 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import {ReactiveFormsModule} from '@angular/forms';
+import {ReactiveFormsModule, FormsModule } from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
@@ -20,6 +21,8 @@ import { PostListComponent } from './post-list/post-list.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatPaginatorModule} from '@angular/material/paginator';
+import { LoginComponent } from './auth/sign-in/login.component';
+import { SignUpComponent } from './auth/sign-up/sign-up.component';
 
 
 @NgModule({
@@ -27,12 +30,15 @@ import { MatPaginatorModule} from '@angular/material/paginator';
     AppComponent,
     PostCreateComponent,
     HeaderComponent,
-    PostListComponent
+    PostListComponent,
+    LoginComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    FormsModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,
